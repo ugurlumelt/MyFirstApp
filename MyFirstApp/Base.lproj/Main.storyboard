@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coffee App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOI-uM-stW">
+                                <rect key="frame" x="89" y="77" width="196" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="jCi-pN-KVG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ButFirstCoffee" highlightedImage="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="8qF-a1-ItR">
+                                <rect key="frame" x="89" y="152" width="206" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="5nV-T8-VP5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-ZV-hUj">
+                                <rect key="frame" x="103" y="370" width="135" height="73"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change"/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cl-Sy-cBk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BOI-uM-stW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="8sy-sM-a7t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8qF-a1-ItR" secondAttribute="trailing" constant="68" id="DU0-aF-S88"/>
+                            <constraint firstItem="BOI-uM-stW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="G8a-1M-kvf"/>
+                            <constraint firstItem="8qF-a1-ItR" firstAttribute="top" secondItem="BOI-uM-stW" secondAttribute="bottom" constant="8" id="QRn-39-yVD"/>
+                            <constraint firstItem="BOI-uM-stW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TMH-yr-DwX"/>
+                            <constraint firstItem="fEb-ZV-hUj" firstAttribute="top" secondItem="8qF-a1-ItR" secondAttribute="bottom" constant="17" id="Tnb-a2-rYj"/>
+                            <constraint firstItem="fEb-ZV-hUj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aMh-31-xlq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fEb-ZV-hUj" secondAttribute="trailing" constant="137" id="hK6-il-bYo"/>
+                            <constraint firstItem="fEb-ZV-hUj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="poG-za-wsu"/>
+                            <constraint firstItem="BOI-uM-stW" firstAttribute="leading" secondItem="8qF-a1-ItR" secondAttribute="leading" id="szo-YD-45p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coffeeLabel" destination="BOI-uM-stW" id="zp7-wT-8uR"/>
+                        <outlet property="imageView" destination="8qF-a1-ItR" id="ELK-OQ-Tx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="-2.2167487684729066"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButFirstCoffee" width="1536" height="1920"/>
+        <image name="coffee" width="1333" height="1999"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
